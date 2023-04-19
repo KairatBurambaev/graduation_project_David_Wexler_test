@@ -1,6 +1,8 @@
 from database import WriteAndReadDataBase
 from guest import Guest
 
+WARD = WriteAndReadDataBase()
+
 class Ui:
 
     def command_message():
@@ -17,20 +19,21 @@ class Ui:
         match num:
             case 1:
                 new_guest = Guest(str(input('Фамилия: ')),str(input('Имя: ')),str(input('Отчество: ')),int(input('Полных лет: ')),int(input('Месяцев: ')))
-                WriteAndReadDataBase.add_guest(new_guest)
+                WARD.add_guest(new_guest)
                 Ui.input_command()
             case 2:
-                WriteAndReadDataBase.search_guest(str(input('Введите Имя, Фамилию или Отчество: ')))
+                WARD.search_guest(str(input('Введите Имя, Фамилию или Отчество: ')))
                 Ui.input_command()
             case 3:
-                WriteAndReadDataBase.update_guest(str(input('Введите Имя, Фамилию или Отчество: ')))
+                WARD.update_guest(str(input('Введите Имя, Фамилию или Отчество: ')))
                 Ui.input_command()
             case 4:
-                WriteAndReadDataBase.del_guest(str(input('Введите Имя, Фамилию или Отчество: ')))
+                WARD.del_guest(str(input('Введите Имя, Фамилию или Отчество: ')))
                 Ui.input_command()
             case 5:
-                WriteAndReadDataBase.read_db()
+                WARD.read_db()
                 Ui.input_command()
             case 0:
+                WARD.end_connect()
                 print('Досвидание!')
                 exit()

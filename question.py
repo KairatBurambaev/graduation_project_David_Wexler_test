@@ -1,5 +1,3 @@
-
-
 class Question:
     def __init__(self, quest, answer_true, answer_false):
         self.quest = quest

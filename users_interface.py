@@ -14,6 +14,8 @@ class Ui:
         print('Закончить работу: 0')
     
     def input_command():
+        Ui.command_message()
+
         num = int(input('Введите номер действия: '))
 
         match num:

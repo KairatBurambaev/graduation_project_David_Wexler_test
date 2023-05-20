@@ -1,2 +1,9 @@
+from users_interface import Ui
+
 class Start:
-    pass
+
+    def start():
+        Ui.input_command()
+
+    def start_test(id):
+        pass

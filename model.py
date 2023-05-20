@@ -1,11 +1,10 @@
-import json
-from test import Test
-from users_interface import Ui
-from question import Question
-from readjson import ReadJson
+from start import Start
 
-if __name__ == '__main__':
+# test1 = Test('awareness')
 
-    ReadJson.chose_test()
-    Ui.command_message()
-    Ui.input_command()
+# test1.read_test()
+
+# for elem in test1.questions:
+#     print(elem.quest)
+
+Start.start()

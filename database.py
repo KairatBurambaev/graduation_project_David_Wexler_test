@@ -27,8 +27,9 @@ class WriteAndReadDataBase:
         self.cursor.execute("SELECT * FROM guest")
         results = self.cursor.fetchall()
         for row in results:
-            if guest in row:
-                print(row)
+            for elem in row:
+                if guest in str(elem):
+                    print(row)
 
     def add_guest(self, guest):
         current_date = date.today()

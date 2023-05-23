@@ -1,4 +1,5 @@
 from start import Start
+from users_interface import Ui
 
 # test1 = Test('awareness')
 
@@ -7,4 +8,4 @@ from start import Start
 # for elem in test1.questions:
 #     print(elem.quest)
 
-Start.start()
+Ui.input_command()

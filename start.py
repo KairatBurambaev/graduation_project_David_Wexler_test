@@ -1,9 +1,13 @@
-from users_interface import Ui
+from test import Test
 
 class Start:
 
-    def start():
-        Ui.input_command()
-
     def start_test(id):
-        pass
+        
+        test = str(input('Выберите тест: '))
+
+        new_test = Test(test)
+        new_test.read_test()
+
+        for elem in new_test.questions:
+            print(elem.quest)
